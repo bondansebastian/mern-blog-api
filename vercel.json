@@ -1,14 +1,13 @@
 {
-    "version": 2,
-    "builds": [
+    "buildCommand": "npm run prod",
+    "cleanUrls": true,
+    "framework": null,
+    "outputDirectory": "api",
+    "rewrites": [
         {
-            "use": "@vercel/node"
+            "source": "^/(.*)$",
+            "destination": "/api/$1"
         }
     ],
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "/dist"
-        }
-    ]
+    "regions": ["sin1"]
 }
