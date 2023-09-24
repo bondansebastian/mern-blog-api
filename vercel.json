@@ -1,13 +1,6 @@
 {
     "buildCommand": "npm run prod",
-    "cleanUrls": true,
     "framework": null,
     "outputDirectory": "api",
-    "rewrites": [
-        {
-            "source": "^/(.*)$",
-            "destination": "/api/$1"
-        }
-    ],
     "regions": ["sin1"]
 }
