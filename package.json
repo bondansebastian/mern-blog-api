@@ -10,18 +10,16 @@
   "description": "",
   "main": "src/index.ts",
   "scripts": {
-    "prod": "npm run clean && rollup --config",
-    "dev": "npm run clean && babel ./src --extensions \".ts\" --out-dir dist",
-    "start": "npm run dev && node ./dist/index.js",
-    "clean": "rimraf dist",
+    "prod": "rimraf api && rollup --config",
+    "dev": "rimraf build && babel ./src --extensions \".ts\" --out-dir build",
+    "start": "npm run dev && node ./build/index.js",
     "watch": "nodemon"
   },
   "nodemonConfig": {
-    "exec": "npm run dev",
+    "exec": "npm run start",
     "ext": "ts",
     "watch": [
-      "src/*",
-      "dist/*"
+      "src/*"
     ],
     "ignore": [
       "**/__tests__/**",

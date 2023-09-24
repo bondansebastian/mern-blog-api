@@ -9,8 +9,8 @@ import nodePolyfills from 'rollup-plugin-polyfill-node';
 export default {
 	input: 'src/index.ts',
 	output: {
-		name: 'index',
-		file: 'dist/index.js',
+		name: 'server',
+		file: 'api/index.js',
 		format: 'cjs'
 	},
 	external: [
