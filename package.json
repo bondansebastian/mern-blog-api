@@ -10,11 +10,9 @@
   "description": "",
   "main": "src/index.ts",
   "scripts": {
-    "build": "npm run clean && npm run transpile",
-    "start": "node ./dist/index.js",
-    "dev": "NODE_ENV=development npm run build && npm run start",
-    "prod": "NODE_ENV=production npm run build",
-    "transpile": "babel ./src --extensions \".ts\" --out-dir dist",
+    "prod": "npm run clean && rollup --config",
+    "dev": "npm run clean && babel ./src --extensions \".ts\" --out-dir dist",
+    "start": "npm run dev && node ./dist/index.js",
     "clean": "rimraf dist",
     "watch": "nodemon"
   },
@@ -42,13 +40,19 @@
     "install": "^0.13.0",
     "jsonwebtoken": "^9.0.2",
     "mongodb": "^6.1.0",
-    "mongoose": "^7.5.2"
+    "mongoose": "^7.5.2",
+    "uninstall": "^0.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.22.15",
     "@babel/core": "^7.22.20",
     "@babel/preset-env": "^7.22.20",
     "@babel/preset-typescript": "^7.22.15",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-commonjs": "^25.0.4",
+    "@rollup/plugin-json": "^6.0.0",
+    "@rollup/plugin-node-resolve": "^15.2.1",
+    "@rollup/plugin-typescript": "^11.1.3",
     "@types/bcrypt": "^5.0.0",
     "@types/cors": "^2.8.14",
     "@types/express": "^4.17.17",
@@ -56,6 +60,9 @@
     "@types/node": "^20.6.3",
     "nodemon": "^3.0.1",
     "rimraf": "^5.0.1",
+    "rollup": "^3.29.3",
+    "rollup-plugin-dotenv": "^0.5.0",
+    "tslib": "^2.6.2",
     "typescript": "^5.2.2"
   }
 }
