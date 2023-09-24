@@ -37,11 +37,8 @@
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
-    "install": "^0.13.0",
     "jsonwebtoken": "^9.0.2",
-    "mongodb": "^6.1.0",
-    "mongoose": "^7.5.2",
-    "uninstall": "^0.0.0"
+    "mongoose": "^7.5.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.22.15",
@@ -62,6 +59,7 @@
     "rimraf": "^5.0.1",
     "rollup": "^3.29.3",
     "rollup-plugin-dotenv": "^0.5.0",
+    "rollup-plugin-polyfill-node": "^0.12.0",
     "tslib": "^2.6.2",
     "typescript": "^5.2.2"
   }

@@ -4,20 +4,30 @@ import typescript from '@rollup/plugin-typescript';
 import commonjs from '@rollup/plugin-commonjs';
 import dotenv from "rollup-plugin-dotenv";
 import json from '@rollup/plugin-json';
+import nodePolyfills from 'rollup-plugin-polyfill-node';
 
 export default {
 	input: 'src/index.ts',
 	output: {
 		name: 'index',
 		file: 'dist/index.js',
-		format: 'iife'
+		format: 'cjs'
 	},
+	external: [
+		'bcrypt',
+		'cors',
+		'dotenv',
+		'express',
+		'jsonwebtoken',
+		'mongoose',
+	],
 	plugins: [
-        resolve({ preferBuiltins: true }), 
+		resolve({ preferBuiltins: true }), 
 		commonjs(),
         babel({ babelHelpers: 'bundled' }),
         typescript({ module: "ESNext" }),
 		dotenv(),
 		json(),
+		nodePolyfills(),
     ]
 };
