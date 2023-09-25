@@ -1,6 +1,5 @@
 {
     "buildCommand": "npm run prod",
     "framework": null,
-    "outputDirectory": "api",
     "regions": ["sin1"]
 }
