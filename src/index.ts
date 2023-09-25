@@ -4,7 +4,7 @@ import cors from "cors";
 import dbo from "./db/conn";
 // import createAdmin from './middlewares/createAdmin';
 import indexRoutes from './routes/indexRoutes';
-// import postRoutes from './routes/postRoutes';
+import postRoutes from './routes/postRoutes';
 import authRoutes from './routes/authRoutes';
 
 const app = express();
@@ -18,7 +18,7 @@ app.use(express.urlencoded({
 // app.use(createAdmin());
 app.use(authRoutes);
 app.use(indexRoutes);
-// app.use(postRoutes);
+app.use(postRoutes);
 
 app.listen(port, () => {
     // Perform a database connection when server starts
