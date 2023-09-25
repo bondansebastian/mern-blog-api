@@ -11,5 +11,6 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "ES5",
-  }
+  },
+  "include": ["./api/*.ts"],
 }

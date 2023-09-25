@@ -1,5 +1,4 @@
 .env
 .vercel
-api
 build
 node_modules

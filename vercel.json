@@ -1,6 +1,5 @@
 {
-    "buildCommand": "npm run prod",
     "framework": null,
-    "outputDirectory": "./",
-    "regions": ["sin1"]
+    "regions": ["sin1"],
+    "rewrites": [{ "source": "/(.*)", "destination": "/api" }]
 }
